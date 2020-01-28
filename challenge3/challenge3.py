@@ -23,9 +23,9 @@ class Challenge3(unittest.TestCase):
     self.driver.get("https://copart.com")
     popularMake = self.driver.find_elements(By.CSS_SELECTOR, "[href*='/popular/make']")
     popularModel = self.driver.find_elements(By.CSS_SELECTOR, "[href*='/popular/model']")
-    popularItem = popularMake + popularModel
-    for makeModel in popularItem:
-      print(makeModel.text)
+    makeModel = popularMake + popularModel
+    for popular in makeModel:
+      print(popular.text + '--' + popular.get_attribute('href'))
 
 if __name__ == '__main__':
   unittest.main()

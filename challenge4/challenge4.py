@@ -1,7 +1,6 @@
 import inflect
 
 iteration = int(input("enter degree of fibancci:\n"))
-i = 0
 
 def recur_fibo(n):
   if n <= 1:
